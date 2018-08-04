@@ -33,11 +33,11 @@
 	<?php
 	$name  		= addslashes($_POST['txtTenNV']);
 	$id   		= addslashes($_POST['txtMaNV']);
-	$noisinh    = addslashes($_POST['txtNoisinh']);
 	$ngaysinh   = addslashes($_POST['txtNgaysinh']);
+	$noisinh    = addslashes($_POST['txtNoisinh']);
 	
 	$add = "INSERT INTO quanlynhanvien ( NameNV,id_NV, date_of_birth, place_of_birth)
-	VALUE ('{$name}', '{$id}','{$noisinh}','{$ngaysinh}')";
+	VALUE ('{$name}', '{$id}','{$ngaysinh}','{$noisinh}')";
 
 	if ($connect->query($add)===true)
 	{
