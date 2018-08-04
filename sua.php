@@ -52,11 +52,11 @@
 			}
 			?>
 		</table>
-		<input type="submit" name="them" value="Sửa Nhân Viên">
+		<input type="submit" name="sua" value="Sửa Nhân Viên">
 		<?php 
 
     
-    if(isset($_POST['them']))
+    if(isset($_POST['sua']))
     {
     	$NameNV   = addslashes($_POST['textNameNV']);
     	$idnv     = addslashes($_POST['textid_NV']);
