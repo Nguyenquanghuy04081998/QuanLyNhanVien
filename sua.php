@@ -63,7 +63,6 @@
     	$ngaysinh = addslashes($_POST['textdate_of_birth']);
     	$diachi   = addslashes($_POST['textplace_of_birth']);
     	$query="UPDATE quanlynhanvien SET  NameNV = '$NameNV', date_of_birth= '$ngaysinh',place_of_birth = '$diachi' where id_NV = '$idnv'";
-    	echo $query;
     	if(mysqli_query($connect,$query))
     	{
     		header('Location:index.php');
