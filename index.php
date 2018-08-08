@@ -3,6 +3,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
+<center>
+<h1> Quản Lý Sinh Viên </h1>
     <?php
 		include("ketnoi.php");
 		$query="select * from quanlynhanvien";
@@ -21,7 +23,7 @@
 				Ngày sinh
 			</th>
 			<th>
-				Địa chỉ
+				Địa Chỉ
 			</th>
 			<th>
 				Chức năng
@@ -53,6 +55,9 @@
 	?>
 	
 	</table>
-	<input type="submit" name="them" value="Thêm Nhân Viên" onclick="location.href='them.php'">
+	<br>
+	<input type="submit" name="them" value="Thêm Nhân Viên" onClick="location.href='them.php'"> 
+	<input type="submit" name="them1" value="Xem danh sách nhân viên theo Tên và Mã sinh viên" onClick="location.href='danhsach.php'">
+	</center>
 </body>
 </html>
