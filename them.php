@@ -4,6 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+<center>
+<h2> Thêm Sinh Viên vào danh sách </h2>
 	<?php include('ketnoi.php'); ?>
 	<form method="post">
 		<table>
@@ -31,6 +33,7 @@
 		<input name="them" type="submit" value="Thêm" />
 	</form>
 	<?php
+
 	if(isset($_POST['them']))
 	{
 		$name  		= addslashes($_POST['txtTenNV']);
@@ -53,4 +56,5 @@
 		}
 	}
 	?>
+	</center>
 </body>
