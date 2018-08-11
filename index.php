@@ -14,10 +14,10 @@
 	<table border="1">
 		<tr bgcolor="#CC3300" style="color:#FFFFFF; font-weight:bold">
 			<th>
-				Tên nhân viên
+				Tên Nhân Viên
 			</th>
 			<th>
-				Mã nhân viên
+				Mã Nhân Viên
 			</th>
 			<th>
 				Ngày sinh
