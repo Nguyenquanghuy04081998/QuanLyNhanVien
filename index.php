@@ -14,7 +14,7 @@
 	<table border="1">
 		<tr bgcolor="#CC3300" style="color:#FFFFFF; font-weight:bold">
 			<th>
-				Tên nhân viênn
+				Tên nhân viênnmmm
 			</th>
 			<th>
 				Mã nhân viên
