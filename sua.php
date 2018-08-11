@@ -52,18 +52,17 @@
 			}
 			?>
 		</table>
-		<input type="submit" name="them" value="Sửa Nhân Viên">
+		<input type="submit" name="sua" value="Sửa Nhân Viên">
 		<?php 
 
     
-    if(isset($_POST['them']))
+    if(isset($_POST['sua']))
     {
     	$NameNV   = addslashes($_POST['textNameNV']);
     	$idnv     = addslashes($_POST['textid_NV']);
     	$ngaysinh = addslashes($_POST['textdate_of_birth']);
     	$diachi   = addslashes($_POST['textplace_of_birth']);
     	$query="UPDATE quanlynhanvien SET  NameNV = '$NameNV', date_of_birth= '$ngaysinh',place_of_birth = '$diachi' where id_NV = '$idnv'";
-    	echo $query;
     	if(mysqli_query($connect,$query))
     	{
     		header('Location:index.php');

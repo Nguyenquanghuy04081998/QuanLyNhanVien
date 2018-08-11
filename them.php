@@ -4,6 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+<center>
+<h2> Thêm Sinh Viên vào danh sách </h2>
 	<?php include('ketnoi.php'); ?>
 	<form method="post">
 		<table>
@@ -28,20 +30,31 @@
 				</td>
 			</tr>
 		</table>
-		<input name="submit" type="submit" value="Thêm" />
+		<input name="them" type="submit" value="Thêm" />
 	</form>
 	<?php
-	$name  		= addslashes($_POST['txtTenNV']);
-	$id   		= addslashes($_POST['txtMaNV']);
-	$noisinh    = addslashes($_POST['txtNoisinh']);
-	$ngaysinh   = addslashes($_POST['txtNgaysinh']);
-	
-	$add = "INSERT INTO quanlynhanvien ( NameNV,id_NV, date_of_birth, place_of_birth)
-	VALUE ('{$name}', '{$id}','{$noisinh}','{$ngaysinh}')";
 
-	if ($connect->query($add)===true)
+	if(isset($_POST['them']))
 	{
-		echo " Thêm thành công! <a href='index.php'>về trang quản lý</a>";
+		$name  		= addslashes($_POST['txtTenNV']);
+		$id   		= addslashes($_POST['txtMaNV']);
+		$ngaysinh   = addslashes($_POST['txtNgaysinh']);
+		$noisinh    = addslashes($_POST['txtNoisinh']);
+
+		$add = "INSERT INTO quanlynhanvien ( NameNV,id_NV, date_of_birth, place_of_birth)
+		VALUE ('{$name}', '{$id}','{$ngaysinh}','{$noisinh}')";
+
+		if(mysqli_query($connect,$add))
+		{
+			header('Location:index.php');
+		}
+		else
+		{
+			echo "<script>";
+			echo "alert('Thêm thất bại')";
+			echo "</script>";
+		}
 	}
 	?>
+	</center>
 </body>
